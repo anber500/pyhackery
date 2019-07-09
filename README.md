@@ -1,29 +1,35 @@
-# README #
+# Py Hackery #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Like it says on the tin. A place where there is no wrong answer, you are encouraged to bork things along the way, failure is an excellent way of working out ehat is correct.
+Make sure you fork - well make sure we cant commit straight to master ( in general) 
+
+The wiki is here: https://bitbucket.org/talkingtech/py_hackery/wiki/Home or in the side bar
+
+### Start here
+* https://www.python.org/
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* sharing and caring with python
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* use the force
+
+### Structure
+
+* Jeff knupps stuff was great but its vanished
+* heres a good example 
+* https://github.com/pallets/flask/tree/master/examples/tutorial/
+
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* Writing tests - tests are overrated - jusk jokes
+* Code review - well get to this
+* Other guidelines - well get to this
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
+* Repo owner or admin - the collective
 * Other community or team contact
