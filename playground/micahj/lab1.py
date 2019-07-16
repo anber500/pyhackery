@@ -35,6 +35,16 @@ def text_sandwich(text, char='-', spacer_count=25):
     return f'\n{spacer}\n{text}\n{spacer}'
 
 
+def findfiles(condition, startin):
+    """
+    condition is a lambda taking a file name condition
+    """
+    results = []
+    for d, _, files in os.walk(startin):
+        results.extend([os.path.join(d, f) for f in files if condition(f)])
+    return results
+
+
 # a berry file
 berry_file_path = os.path.join(playground_dir, 'berry', 'lab1', 'README.txt')
 
@@ -62,3 +72,8 @@ print(json.dumps(filtered, indent=2))
 filtered = [''.join(reversed(line)) for line in lines if 'porn' in line]
 print(text_sandwich("backwards berry porn"))
 print(json.dumps(filtered, indent=2))
+
+# ujse os walk to locate files in a directory tree
+files = findfiles(lambda f: '.py' in f.lower(), startin=playground_dir)
+print(text_sandwich('find files with os walk'))
+print(json.dumps(files, indent=3))
