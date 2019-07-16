@@ -57,3 +57,8 @@ lines = read_file_lines(berry_file_path)
 filtered = [line for line in lines if 'porn' in line]
 print(text_sandwich("berry porn"))
 print(json.dumps(filtered, indent=2))
+
+# show filtering the lines with list comprehension - lines reversed
+filtered = [''.join(reversed(line)) for line in lines if 'porn' in line]
+print(text_sandwich("backwards berry porn"))
+print(json.dumps(filtered, indent=2))
