@@ -36,15 +36,24 @@ def text_sandwich(text, char='-', spacer_count=25):
 
 
 # a berry file
-file_path = os.path.join(playground_dir, 'berry', 'lab1', 'README.txt')
+berry_file_path = os.path.join(playground_dir, 'berry', 'lab1', 'README.txt')
 
+# reading whole file content
 print(text_sandwich('reading whole file content'))
-content = read_file(file_path)
+content = read_file(berry_file_path)
 print(content)
 
+# using a generator to loop (with a fakey enumerate)
 print(text_sandwich('using a generator to loop (with a fakey enumerate)'))
-for line_number, line in reader(file_path):
+for line_number, line in reader(berry_file_path):
     print(line_number, line)
 
+# reading file as a list of lines
 print(text_sandwich('reading file as a list of lines'))
-print(json.dumps(read_file_lines(file_path), indent=3))
+print(json.dumps(read_file_lines(berry_file_path), indent=3))
+
+# show filtering the lines with list comprehension
+lines = read_file_lines(berry_file_path)
+filtered = [line for line in lines if 'porn' in line]
+print(text_sandwich("berry porn"))
+print(json.dumps(filtered, indent=2))
