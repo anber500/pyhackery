@@ -22,7 +22,8 @@ def dict_samples():
 
     # you can merge a dict with another dict at the top level with update()
     d1.update(d2)
-    jprint(d1, "d1 updated from d2")
+    d1.update({"key4": 'value4'})
+    jprint(d1, "d1 updated from d2 and the line above")
 
     # this will make a list of pairs
     keys = ("a", "b", "c")
