@@ -53,3 +53,9 @@ if __name__ == '__main__':
 # python -m platform
 # from project root try this
 # python -m playground.micahj.lab2_hints
+
+
+# heres one for later
+"""
+https://realpython.com/flask-google-login/
+"""
