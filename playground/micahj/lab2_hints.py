@@ -51,3 +51,5 @@ if __name__ == '__main__':
     main()
 
 # python -m platform
+# from project root try this
+# python -m playground.micahj.lab2_hints
