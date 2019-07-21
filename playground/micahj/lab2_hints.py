@@ -14,7 +14,7 @@ def jprint(data, title="", pretty=True):
 
 
 def dict_samples():
-    # i am a dictinary
+    # i am a dictionary
     d1 = {"key1": "value1"}
 
     # i am also a dictionary
@@ -41,6 +41,22 @@ def dict_samples():
     d4 = deepcopy(d3)
     jprint(d3, "the original")
     jprint(d4, "the deep copy")
+
+
+def unpack_a_dict_as_list_of_key_value_pairs():
+    d1 = {
+        "a": 1,
+        "b": 2,
+        "c": 3
+    }
+
+    # d1.items() is a list of key value pairs
+    # d1.keys() is just the keys
+    # d1.values() is just the values
+
+    # unpacking
+    for key, val in d1.items():
+        print(key, val)
 
 
 def main():
