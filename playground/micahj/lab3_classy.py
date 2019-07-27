@@ -82,7 +82,9 @@ class SomeCalculatorWithStateAndBehavior(object):
                 " normally I will return a thing"
                 " that looks like a type name. "
                 " comment out __str__ and see what happens."
-                " hint: if you dont implement this method the reult will"
+                " Personally I like to return the class state as json eg"
+                " json.dumps(self.__dict__)"
+                " hint: if you dont implement this method the result will"
                 " look more like this\n"
                 " <__main__.SomeCalculatorWithStateAndBehavior object at 0x7fc0305903c8>")
 
