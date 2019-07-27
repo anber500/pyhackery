@@ -88,6 +88,25 @@ class SomeCalculatorWithStateAndBehavior(object):
                 " look more like this\n"
                 " <__main__.SomeCalculatorWithStateAndBehavior object at 0x7fc0305903c8>")
 
+    def __enter__(self):
+        """
+        For the with block
+        :return:
+        """
+        pass
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """
+        For the with block
+        note exc stands for exception
+        you have to handle exceptions if one happensd in the with block
+        :param exc_type:
+        :param exc_val:
+        :param exc_tb:
+        :return:
+        """
+        pass
+
 
 # -----------------------------
 # sample usages - dont forget your
