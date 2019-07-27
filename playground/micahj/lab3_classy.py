@@ -93,7 +93,8 @@ class SomeCalculatorWithStateAndBehavior(object):
         For the with block
         :return:
         """
-        pass
+        print("you are entering the with block")
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         """
@@ -105,7 +106,14 @@ class SomeCalculatorWithStateAndBehavior(object):
         :param exc_tb:
         :return:
         """
-        pass
+        print("im exiting the with block")
+        if exc_val:
+            print(
+                "im handling an unhandled exception that happended inside the with block")
+            print("heres the traceback object")
+            print(exc_tb)
+            print("heres the exception")
+            print(exc_val)
 
 
 # -----------------------------
@@ -131,6 +139,19 @@ calculator.dumpster()
 
 print("e:\t", calculator)
 
-
 # run me
 # python -m playground.micahj.lab3_classy
+with SomeCalculatorWithStateAndBehavior(name="mr-calcs part 2",
+                                        thing={"something_else": 9},
+                                        arg3="dave") as calc:
+    calc.dumpster()
+
+"""
+try making this with block throw an error using 
+raise Exception("Bork!")
+"""
+
+# with SomeCalculatorWithStateAndBehavior(name="mr-calcs part 2",
+#                                         thing={"something_else": 9},
+#                                         arg3="dave") as calc:
+#     raise Exception("Bork!")
