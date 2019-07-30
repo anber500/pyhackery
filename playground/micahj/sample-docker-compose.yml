@@ -1,0 +1,47 @@
+version: '3.3'
+# want to start up
+# fluentd container
+# mssql container
+# and rabbitmq container
+
+# go checkout ...\swipeo.callflows.calldatalogging\test\SWIPEO.Callflows.CallDataLogging.Tests for
+# a mssql docker image with the bare bones ActivityDb db we need to test with
+
+services:
+   rabbit:
+      image: rabbitmq:3-management
+      ports:
+      - 5672:5672
+      - 15672:15672
+
+   activitydb:
+      build:
+         context: activitydb-docker
+         dockerfile: activitydb.Dockerfile
+      # image: activitydb:latest
+      ports:
+      - 1433:1433
+      environment:
+      - SA_PASSWORD=P@55w0rd
+
+   config-proxy-db:
+      image: "library/postgres"
+      ports:
+      - 5432:5432
+      environment:
+      - POSTGRES_DB=swipeo_config_db
+
+   # config-proxy-api:
+   #    image: 883671954021.dkr.ecr.eu-west-1.amazonaws.com/swipeo.configuration.proxy:v0.1.0.247-master-21d4ca3-dev
+   #    ports:
+   #      - 30485:80
+
+   # fluentd:
+   #    image: fluent/fluentd
+   #    ports:
+   #    - 24226:24226
+
+   redrum:
+      image: redis
+      ports:
+      - 6379:6379
