@@ -1,6 +1,6 @@
 import sys
-import os
 import json
+
 from pyhackery.awesomeness.awesome import something_awesome
 
 

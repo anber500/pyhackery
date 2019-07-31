@@ -1,20 +1,17 @@
-import csv
+import os
+
+from playground.micahj.scratchpad import jprint
+from pyhackery.csv_hack import read_a_simple_csv
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-def read_a_simple_csv(path, delimiter=','):
-    with (open(path)) as f:
-        # read the first row - we expect it to be the header row
-        header = f.readline()  # nb: this advances the reader by 1 line
+def try_csv():
+    data = read_a_simple_csv(path=os.path.join(CURRENT_DIR, 'customer.csv'))
+    jprint(data)
 
-        # replace spaces in the headers with underscores
-        # (makes for better dict keys - you also might want lowercase)
-        fieldnames = [
-            c.strip().replace(' ', '_') for c in
-            header.strip().split(delimiter)
-        ]
-        # get a csv reader for the rest of the file eg f[1:]
-        reader = csv.DictReader(f, fieldnames=fieldnames, delimiter=delimiter)
 
-    # each item in the reader is an OrderedDict - i prefer to use just a
-    # normal Dict for json purposes
-    return [dict(row) for row in reader]
+try_csv()
+
+# run with
+# python -m playground.micahj.lab4_hints
