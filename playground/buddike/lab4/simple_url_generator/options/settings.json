@@ -1,0 +1,17 @@
+{
+  "Customer1": {
+    "FileHeader": "test1,test2",
+    "IsSourceFileHeaderIncluded": "False",
+    "DestinationFileHeader":"test1,test2,test3",
+    "DestinationFileIndexToHaveUrl":"2",
+    "Url": {
+      "TransferProtocol": "http",
+      "Domain": "www.test.com",
+      "QueryParameter": {
+        "Key": "id",
+        "__comment": "Example values for Value : RandomInteger or GUID",
+        "Value": "RandomIntetger"
+      }
+    }
+  }
+}
