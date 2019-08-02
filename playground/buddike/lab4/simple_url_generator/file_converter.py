@@ -47,7 +47,7 @@ class file_processor:
                     if str_array[self.destination_url_decider] == "" or str_array[self.destination_url_decider] == "1":
                         line = (line + ',' + str(self.destination_url_touse+str(randrange(10000000))) + '\n')
                     else:
-                        line = (line + '\n')
+                        line = (line + ',' + '\n')
                     destination_file.write(line)
         destination_file.close()
 
