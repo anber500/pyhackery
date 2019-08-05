@@ -1,8 +1,8 @@
 {
   "SourceDirectory": "D:/TestFiles/Test",
   "DestinationDirectory": "D:/TestFiles/Test2",
-  "SourceFileNamePattern": "WPAYDD_*.csv",
-  "DestinationFileName": "WPAYDDSMS_",
+  "SourceFileNamePattern": "Test_*.csv",
+  "DestinationFileName": "TestOutput_",
   "DestinationFileExtension": ".csv",
   "UpdateURLAtLast": "True",
   "SampleURL": "http://www.test.com/?id=",
