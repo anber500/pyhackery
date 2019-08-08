@@ -1,7 +1,7 @@
 {
   "IsEnabled": "True",
   "IsResultsEnabled": "True",
-  "EmailResultsFileName": "WPAYDD_ EmailResult_",
+  "EmailResultsFileName": "TestDD_ EmailResult_",
   "EmailResultHeader": "Profile name,Account Number,Email Address,DateTime,Delivery Status",
   "EmailResultFileExtension": ".csv",
   "SourceDirectory": "D:/TestFiles/Test",
