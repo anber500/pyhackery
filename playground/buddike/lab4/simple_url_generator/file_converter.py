@@ -18,6 +18,10 @@ class file_processor:
         self.destination_url_touse = settings["SampleURL"]
         self.destination_url_decider = settings["UrlDeciderFieldIndex"]
         self.destination_possible_values = settings["PossibleValues"]
+        self.Is_Results_Enabled = settings["IsResultsEnabled"]
+        self.Email_Results_FileName = settings["EmailResultsFileName"]
+        self.Email_Result_Header = settings["EmailResultHeader"]
+        self.Email_Result_File_Extension = settings["EmailResultFileExtension"]
 
     def get_settings(self,path):
         settings_file = os.path.join(os.getcwd(),path)
@@ -37,6 +41,7 @@ class file_processor:
         destination_file = open(destination_file_path, 'w')
 
         files = glob.glob(source_file)
+        email_result_file_header_array = self.Email_Result_Header.split(",")
 
         for filename in files:
             with open(filename, 'r') as f:
