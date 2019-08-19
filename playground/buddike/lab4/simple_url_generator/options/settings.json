@@ -1,0 +1,16 @@
+{
+  "IsEnabled": "True",
+  "IsResultsEnabled": "True",
+  "EmailResultsFileName": "TestDD_ EmailResult_",
+  "EmailResultHeader": "Profile name,Account Number,Email Address,DateTime,Delivery Status",
+  "EmailResultFileExtension": ".csv",
+  "SourceDirectory": "D:/TestFiles/Test",
+  "DestinationDirectory": "D:/TestFiles/Test2",
+  "SourceFileNamePattern": "Test_*.csv",
+  "DestinationFileName": "TestOutput_",
+  "DestinationFileExtension": ".csv",
+  "UpdateURLAtLast": "True",
+  "SampleURL": "http://www.test.com/?id=",
+  "UrlDeciderFieldIndex": 6,
+  "PossibleValues": ",1"
+}
