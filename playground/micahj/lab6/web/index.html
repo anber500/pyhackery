@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- dont forget to use flex layout div thingy -->
+        <button v-on:click="runLoadTests" :class="{ disabled: isDisabled }" :disabled="isDisabled">FetchIt</button>
+        <div>
+            {{ message }}
+        </div>
+        <h2>{{ test_result }}</h2>
+    </div>
+
+    <script type='text/javascript'>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'My name is Elijah and I am the test master!',
+                test_result: '',
+                isDisabled: false,
+            },
+            
+            /*
+            mounted() {
+                axios
+                    .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                    .then(response => (this.test_result = response))
+            },
+            */
+            
+            methods: {
+                runLoadTests: function () {
+                    this.isDisabled = true;
+                    this.test_result = "Running tests..."
+                    axios
+                        .get('http://localhost:8000/fetch')
+                        .then(response => {
+                            this.test_result = response.data;
+                            this.isDisabled = false;
+                        })
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>
